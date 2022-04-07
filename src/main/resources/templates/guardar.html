@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>Agregar Empleado</title>
+  <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+</head>
+<body>
+
+	<div class="container">
+		<br>
+		<h2>Agregar Empleado</h2>
+		<form action="#" th:action="@{/guardar}" th:object="${empleado}" method="post">
+			<div class="mb-3">
+			  <label for="nombre" class="form-label">Nombre</label>
+			  <input type="text" class="form-control" id="nombre" placeholder="Ingresar Nombre"
+			  	th:field="*{nombre}" name="nombre">
+			</div>
+			<input type="hidden" th:field="*{id}" name="id" id="id">
+			
+			<div class="mb-3">
+			  <label for="apellido" class="form-label">Apellido</label>
+			  <input type="text" class="form-control" id="apellido" placeholder="Ingresar Apellido"
+			  	th:field="*{apellido}" name="apellido">
+			</div>
+			
+			<div class="mb-3">
+			  <label for="edad" class="form-label">Edad</label>
+			  <input type="text" class="form-control" id="edad" placeholder="Ingresar Edad"
+			  	th:field="*{edad}" name="edad">
+			</div>
+			
+			<div class="mb-3">
+			  <label for="direccion" class="form-label">Dirección</label>
+			  <input type="text" class="form-control" id="direccion" placeholder="Ingresar Dirección"
+			  	th:field="*{direccion}" name="direccion">
+			</div>
+			
+			<div class="mb-3">
+			  <label for="telefono" class="form-label">Teléfono</label>
+			  <input type="text" class="form-control" id="telefono" placeholder="Ingresar Teléfono"
+			  	th:field="*{telefono}" name="telefono">
+			</div>
+			
+			<button type="submit" class="btn btn-dark">Guardar</button>
+			
+		</form >
+	</div >
+
+</body>
+</html>
